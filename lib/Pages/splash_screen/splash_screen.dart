@@ -1,0 +1,33 @@
+import 'dart:async';
+import 'package:flutter/material.dart';
+import 'package:health_app/Pages/otp/otp.dart';
+import 'package:health_app/size_config.dart';
+import 'body_splash_screen.dart';
+
+class SplashScreen extends StatefulWidget {
+  @override
+  _SplashScreenState createState() => _SplashScreenState();
+}
+
+class _SplashScreenState extends State<SplashScreen> {
+  @override
+  void initState() {
+    super.initState();
+    Timer(
+      Duration(seconds: 3),
+      () => Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => Otp()),
+      ),
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    SizeConfig().init(context);
+    return Scaffold(
+      backgroundColor: Colors.white,
+      body: Body(),
+    );
+  }
+}
