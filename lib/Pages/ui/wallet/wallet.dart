@@ -62,227 +62,23 @@ class Wallet extends StatelessWidget {
       ),
       body: Column(
         children: [
-          SizedBox(
-            height: 20,
+          balancetile(
+            'assets/doctorapp/chat/ic_wallet_balance.png',
+            'Wallet Balance',
+            'Today, 20 March',
+            'Top up',
+            '8,504',
+            '+25% Increase from last week',
+            true,
           ),
-          Center(
-            child: Container(
-              height: 200,
-              width: SizeConfig.screebWidth * 0.90,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16), color: Colors.white),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset(
-                            'assets/doctorapp/chat/ic_wallet_balance.png'),
-                        Column(
-                          children: [
-                            Text(
-                              'Wallet Balance',
-                              style:
-                                  TextStyle(color: Colors.blue, fontSize: 17),
-                            ),
-                            Text(
-                              'Today, 20 March',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          height: 2,
-                          width: 40,
-                        ),
-                        Container(
-                          height: 40,
-                          width: 100,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.yellow)),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
-                            child: Text(
-                              'Top Up',
-                              style: TextStyle(color: Colors.yellow),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          '\$',
-                          style: TextStyle(fontSize: 20, color: Colors.grey),
-                        ),
-                        SizedBox(
-                          width: 3,
-                        ),
-                        Text(
-                          '8,504',
-                          style: TextStyle(
-                            fontSize: 30,
-                          ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'USD',
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.grey),
-                            ),
-                            Text(
-                              '.96',
-                              style:
-                                  TextStyle(fontSize: 17, color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                        Image.asset('assets/doctorapp/chat/ic_increase.png'),
-                        Padding(
-                          padding: const EdgeInsets.fromLTRB(90, 10, 10, 10),
-                          child: Container(
-                            height: 35,
-                            width: 110,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(4),
-                              color: Colors.blue,
-                            ),
-                            child: Center(
-                              child: Text(
-                                'Withdraw',
-                                style: TextStyle(color: Colors.white),
-                                textAlign: TextAlign.center,
-                              ),
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      '+25% Increase from last week',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          SizedBox(
-            height: 20,
-          ),
-          Center(
-            child: Container(
-              height: 200,
-              width: SizeConfig.screebWidth * 0.90,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16), color: Colors.white),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.all(20.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        Image.asset('assets/doctorapp/chat/ic_chart.png'),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'INCOME',
-                              style:
-                                  TextStyle(fontSize: 17, color: Colors.black),
-                            ),
-                            Text(
-                              'This week, 13-20 feb',
-                              style: TextStyle(color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                        Container(
-                          height: 2,
-                          width: 10,
-                        ),
-                        Container(
-                          height: 40,
-                          width: 100,
-                          decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(8),
-                              border: Border.all(color: Colors.yellow)),
-                          child: Padding(
-                            padding: const EdgeInsets.only(top: 8.0),
-                            child: Text(
-                              'View Details',
-                              style: TextStyle(color: Colors.yellow),
-                              textAlign: TextAlign.center,
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.all(12.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      children: [
-                        Text(
-                          '\$',
-                          style: TextStyle(fontSize: 20, color: Colors.grey),
-                        ),
-                        SizedBox(
-                          width: 3,
-                        ),
-                        Text(
-                          '49,206',
-                          style: TextStyle(
-                            fontSize: 30,
-                          ),
-                        ),
-                        Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text(
-                              'USD',
-                              style:
-                                  TextStyle(fontSize: 14, color: Colors.grey),
-                            ),
-                            Text(
-                              '.00',
-                              style:
-                                  TextStyle(fontSize: 17, color: Colors.grey),
-                            ),
-                          ],
-                        ),
-                        Image.asset('assets/doctorapp/chat/ic_derease.png'),
-                      ],
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 8.0),
-                    child: Text(
-                      '-8% Decrease from last week',
-                      style: TextStyle(color: Colors.grey),
-                    ),
-                  )
-                ],
-              ),
-            ),
+          balancetile(
+            'assets/doctorapp/chat/ic_chart.png',
+            'INCOME',
+            'This week, 13-20 Feb',
+            'View Details',
+            '49,206',
+            '-8% Decrease from last week',
+            false,
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(20.0, 20, 20, 0),
@@ -392,6 +188,134 @@ class Wallet extends StatelessWidget {
               Container(),
             ],
           ),
+        ),
+      ),
+    );
+  }
+
+// Here we design tile for withdraw and income container
+  Widget balancetile(
+    String imgpath,
+    String balancetype,
+    String date,
+    String accholder,
+    String amount,
+    String percentageinfo,
+    bool isWithdraw,
+  ) {
+    return Padding(
+      padding: const EdgeInsets.all(12.0),
+      child: Container(
+        height: 200,
+        width: SizeConfig.screebWidth * 0.9,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(16),
+          color: Colors.white,
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset(
+                    imgpath,
+                    fit: BoxFit.cover,
+                  ),
+                  SizedBox(
+                    width: 10,
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        balancetype,
+                        style: TextStyle(fontSize: 20, color: Colors.blue[900]),
+                      ),
+                      Text(
+                        date,
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                    ],
+                  ),
+                  Expanded(
+                    child: Container(
+                      width: 40,
+                    ),
+                  ),
+                  Container(
+                    height: 40,
+                    width: 110,
+                    decoration: BoxDecoration(
+                      border: Border.all(color: Colors.orange),
+                      borderRadius: BorderRadius.circular(8),
+                    ),
+                    child: Center(
+                      child: Text(
+                        accholder,
+                        style: TextStyle(color: Colors.orange),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '\$',
+                    style: TextStyle(color: Colors.grey, fontSize: 20),
+                  ),
+                  SizedBox(
+                    width: 5,
+                  ),
+                  Text(
+                    amount,
+                    style: TextStyle(fontSize: 30),
+                  ),
+                  Column(
+                    children: [
+                      Text(
+                        'USD',
+                        style: TextStyle(color: Colors.grey),
+                      ),
+                      Text('.99', style: TextStyle(color: Colors.grey))
+                    ],
+                  ),
+                  Expanded(
+                    child: Container(
+                      width: 70,
+                    ),
+                  ),
+                  isWithdraw
+                      ? Container(
+                          height: 50,
+                          width: 140,
+                          decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(8),
+                              color: Colors.blue),
+                          child: Center(
+                            child: Text(
+                              'Withdrawl',
+                              style:
+                                  TextStyle(color: Colors.white, fontSize: 18),
+                            ),
+                          ),
+                        )
+                      : SizedBox(),
+                ],
+              ),
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Text(percentageinfo, style: TextStyle(color: Colors.grey)),
+            ),
+          ],
         ),
       ),
     );

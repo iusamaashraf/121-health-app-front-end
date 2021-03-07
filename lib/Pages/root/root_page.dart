@@ -69,13 +69,18 @@ class _RootPageState extends State<RootPage> {
                     selectedindex = index;
                   });
                 },
-                child: Image.asset(imgdata)),
+                child: Image.asset(
+                  imgdata,
+                  color: index == selectedindex ? Colors.orange : Colors.grey,
+                )),
             SizedBox(
               height: 8,
             ),
             Text(
               namedata,
-              style: TextStyle(fontSize: 12),
+              style: TextStyle(
+                  fontSize: 12,
+                  color: index == selectedindex ? Colors.orange : Colors.grey),
             ),
           ],
         ));
